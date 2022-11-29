@@ -1,1 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
 
+:root {
+    --accent: #ff9900; 
+    --colour-one: #414a4c;
+    --colour-two:   #3b444b;
+    --colour-three: #353839; 
+    --colour-four: #232b2b; 
+    --background: #0e1111;
+
+    --text-size: 0.98em;
+    --h1-size: 48px;
+    --h2-size: 36px;
+    --h3-size:  20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: lightgray;
+}
+
+body, html {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background);
+    font-family: 'Orbitron', cursive;
+}
+.container {
+  margin-top: 5rem;
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.time-container {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--colour-two);
+  color: var(--primary);
+  border-radius: 6px;
+  padding: 0 10px;
+  box-shadow: 1px 1px 2px black;
+}
+
+.time-container p {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.time-container span {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+#button-container {
+  text-align: center;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+button {
+  color: var(--accent);
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  margin: 1 0.5rem;
+  background: var(--colour-four);
+  font-size: 1.5rem;
+  font-weight: 400;
+  border-radius: 20px;
+  cursor: pointer;
+}
+  
+.active,
+.stopActive {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  list-style: none;
+  flex-direction: column;
+}
+
+li {
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  margin-bottom: 0.5rem;
+  background-color: var(--colour-four);
+  border-radius: 4px;
+  display: flex;
+}
