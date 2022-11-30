@@ -7,11 +7,6 @@
     --colour-three: #353839; 
     --colour-four: #232b2b; 
     --background: #0e1111;
-
-    --text-size: 0.98em;
-    --h1-size: 48px;
-    --h2-size: 36px;
-    --h3-size:  20px;
 }
 
 * {
@@ -91,12 +86,17 @@ ul {
   margin-bottom: 1rem;
   list-style: none;
   flex-direction: column;
+  text-align: center;
 }
 
 li {
   font-size: 2rem;
   padding: 1rem 2rem;
   margin-bottom: 0.5rem;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  text-align:center; 
   background-color: var(--colour-four);
   border-radius: 4px;
   display: flex;

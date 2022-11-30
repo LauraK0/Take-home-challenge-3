@@ -8,12 +8,12 @@ const lapDisplay = document.querySelector("ul");
 let hrDisplay = document.getElementById('hour');
 let minDisplay = document.getElementById('minute');
 let secDisplay = document.getElementById('second');
-let msDisplay = document.getElementById('msecond');
+let csDisplay = document.getElementById('centisecond');
 
 let hr = '00';
 let min = '00';
 let sec = '00';
-let ms = '00';
+let cs = '00';
 
 let timer = false;
 
@@ -31,12 +31,12 @@ function startTimer() {
   if (timer === false) {
     timer = true;
     startTimer = setInterval(() => {
-      ms++;
-      ms = ms < 10 ? "0" + ms : ms;
-      if (ms == 100) {
+      cs++;
+      cs = cs < 10 ? "0" + cs : cs;
+      if (cs == 100) {
         sec++;
         sec = sec < 10 ? "0" + sec : sec;
-        ms = "0" + 0;
+        cs = "0" + 0;
       } else if (sec == 60) {
         min++;
         min = min < 10 ? "0" + min : min;
@@ -65,16 +65,14 @@ function resetTimer() {
   hr = '00';
   min = '00';
   sec = '00';
-  ms = '00';
+  cs = '00';
   updateDisplay();
-  removeLocal();
-  clearLaps();
   timer = false;
 };
 
 function addLap() {
   let lap = document.createElement("li");
-  lap.innerHTML = `${hr}:${min}:${sec}:${ms}`;
+  lap.innerHTML = `${hr}:${min}:${sec}:${cs}`;
   lapDisplay.appendChild(lap);
   saveLap(lap.innerHTML);
 };
@@ -85,7 +83,7 @@ function clearLaps() {
 };
 
 function updateDisplay() {
-  msDisplay.innerHTML = ms;
+  csDisplay.innerHTML = cs;
   secDisplay.innerHTML = sec;
   minDisplay.innerHTML = min;
   hrDisplay.innerHTML = hr;
@@ -99,9 +97,8 @@ function getLaps() {
     laps = JSON.parse(localStorage.getItem('laps'));
   }
   laps.forEach(function (lap) {
-    console.log(lap);
     let newLap = document.createElement("li");
-    newLap.innerHTML = `${hr}:${min}:${sec}:${ms}`;
+    newLap.innerHTML = `${hr}:${min}:${sec}:${cs}`;
     lapDisplay.appendChild(newLap);
     });
 }
