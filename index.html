@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Online stop watch</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="time-container">
+        <p>
+          <span id="hour">00</span>:
+          <span id="minute">00</span>:
+          <span id="second">00</span>.
+          <span id="centisecond">00</span>
+        </p>
+      </div>
+      <div id="button-container">
+        <button type="button" id="start">start</button>
+        <button type="button" id="stop">pause</button>
+        <button type="button" id="lap">lap</button>
+        <button type="button" id="reset">reset</button>
+        <button type="button" id="clear">clear</button>
+      </div>
+      <ul class="lap"></ul>
+    </main>
+    <script src="./stop-watch/script.js"></script>
+  </body>
+</html>
