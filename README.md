@@ -25,5 +25,5 @@ The stopwatch must be accurate and have the following features:
 - [x] Lap button: A button to write the time to a list/table of laps (this would not pause the timer). The results should be shown on screen and still be visible if the page is refreshed.
 - [x] Clear lap history button: A button to clear any lap history
 - [x] Make it look good
-- [x] No bugs or quirky behaviour
+- [ ] No bugs or quirky behaviour
 
